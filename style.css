@@ -11,19 +11,15 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-    /* Fondo general de toda la página */
     background-image: url("fondoMuser.png");
     background-size: 100% auto;
     background-position: top center;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
 
     display: flex;
     flex-direction: column;
 }
-
-/* El contenido principal es transparente */
 .fondo {
     background: transparent;
     flex: 1;
@@ -351,8 +347,12 @@ footer p {
 /* ================================= */
 
 @media (max-width: 700px) {
-
-    /* Encabezado */
+    body {
+       
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed; 
+    }
     #encabezado {
         height: auto;
         min-height: 70px;
