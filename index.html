@@ -23,7 +23,19 @@
 
 <body>
 
-    <!-- ENCABEZADO -->
+    <div id="modalBienvenida" class="modal-bienvenida">
+    <div class="contenido-modal">
+        <span class="corazon-icono">💖</span>
+        <h2>Para mi Muser mi linda niña</h2>
+        <p>Bueno hermosa, feliz cumpleaños jeje queria hacer esto mas que nada para que 
+            puedas guardar tus hermosos dibujos que tanto haces y tambien puedas usarlo si quieres mostrarlos para tus futuras comisiones , no esta terminado lamentablemente
+            falta poner mejoras, que junto contigo espero poner, pero bueno quiero que sepas que te quiero mucho , y te agradezco porque gracias a ti cada dia es mas hermoso, tu me los alegras con tu presencia porque eres una hermosa persona y porque se que del otro lado
+            de cada llamada o cada mensaje esta una linda pequeña, la cual quiero mucho, espero que estes mejor cuando te despiertes, Feliz cumpleaños amor
+            , te amo mucho , Fertroz. 
+        </p>
+        <button id="btnEntrar" class="btn-entrar">Abrir Regalo ✨</button>
+    </div>
+</div>
     <header id="encabezado">
 
         <img id="logo" src="icon.png" alt="Logo de MuserArts">
@@ -141,6 +153,19 @@
         </p>
 
     </footer>
+                   <script>document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('modalBienvenida');
+    const btnEntrar = document.getElementById('btnEntrar');
+
+    btnEntrar.addEventListener('click', () => {
+        // Hace un efecto suave de desvanecimiento al cerrar
+        modal.style.opacity = '0';
+        modal.style.transition = 'opacity 0.4s ease';
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 400);
+    });
+});</script>
 
 </body>
 </html>
