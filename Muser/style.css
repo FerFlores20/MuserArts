@@ -1,0 +1,765 @@
+
+/* ================================= */
+/*       CONFIGURACIÓN GENERAL       */
+/* ================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Fondo general de toda la página */
+    background-image: url("fondoMuser.png");
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* El contenido principal es transparente */
+.fondo {
+    background: transparent;
+    flex: 1;
+}
+
+
+/* ================================= */
+/*            ENCABEZADO             */
+/* ================================= */
+
+#encabezado {
+    background: rgba(248, 225, 248, 0.5) ;
+    display: flex;
+    height: 70px;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid #efb6ef;
+    box-shadow: 0 2px 10px rgba(244, 148, 244, 0.15);
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 2px solid #EF94E7;
+    margin-left: 10px;
+}
+
+#titleA {
+    font-style: normal;
+    font-family: "Cookie", cursive;
+    font-size: 38px;
+
+    color: #A65CC2;
+    margin-left: 15px;
+
+    text-decoration: none;
+}
+
+
+/* ================================= */
+/*            NAVEGACIÓN             */
+/* ================================= */
+
+nav {
+    margin-left: auto;
+    margin-right: 40px;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: #A65CC2;
+    background-color: #f2caed;
+    padding: 10px 18px;
+    border-radius:30px;
+
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffff;
+    background-color: #eb99eb;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(179, 109, 179, 0.3);
+}
+
+.iniciobtn {
+    background-color: #F67CC3;
+    color: white;
+    border: 3px solid;
+    border-color:#f1a2d0 ;
+    
+}
+.iniciobtn:hover{
+    color:#F67CC3;
+    background-color: #f5cbe4;
+}
+
+
+/* ================================= */
+/*         SECCIÓN DE INICIO         */
+/* ================================= */
+
+#inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.presentacion {
+   background-image: url("fondopresent.png");
+   background-size: contain;
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 10px auto 0;
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    border-radius: 80px;
+    border: 3px solid #f2e1f2;
+    box-shadow: 0 8px 25px rgba(244, 148, 244, 0.2);
+}
+
+#ImageIni {
+    width: 80%;
+    max: width 250px; ;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0px 0px 15px rgba(255, 215, 0, 0.6));
+    filter: drop-shadow(0px 0px 15px gold);
+}
+#ImageIni:hover{
+    filter: drop-shadow(0px 0px 25px gold);
+    transform: scale(1.02);
+}
+
+.presentacion-texto {
+    background-image: url("fondoTexto.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-family: "Pacifico", cursive;
+    font-size: clamp(16px, 2vw, 24px);
+    padding: 45px 40px;
+    margin: 0;
+    color: #A769D4;
+    width: 100%;
+    
+    max-width: 1300px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    line-height: 1.5;   
+}
+.textTiuloPrent{
+    -webkit-text-stroke: 1px #A769D4;
+    color:white;
+    font-size:45px;
+    text-align: center;
+    font-weight:100;
+}
+.card-footer-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.btn-explorar {
+    background-color: #ff9ecb;
+    color: white;
+    text-decoration: none;
+    font-family: "Pacifico";
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid white;
+    box-shadow: 0 4px 10px rgba(255, 158, 203, 0.4);
+    transition: all 0.2s ease;
+}
+.btn-explorar:hover {
+    background-color: #ff82bd;
+    transform: translateY(-2px);
+}
+
+/* Estilo para los círculos de redes sociales de la derecha */
+.redes-sociales {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-red {
+    width: 38px;
+    height: 38px;
+    background-color: #a769d4;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0 3px 8px rgba(167, 105, 212, 0.4);
+    transition: all 0.2s ease;
+}
+
+.icon-red:hover {
+    background-color: #904ebc;
+    transform: scale(1.1);
+}
+
+.titulotarjetas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #A55CC9;
+    font-family: "Pacifico";
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.titulotarjetas::before,
+.titulotarjetas::after {
+    content: "";
+    flex: 1; 
+    height: 3px;
+    background: linear-gradient(to right, transparent, #FABBF6, transparent);
+}
+
+.tarjetasT {
+    gap: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+    margin-bottom: 40px;
+}
+.tarjeta1, .tarjeta2, .tarjeta3 {
+    border-radius: 20px;
+    border: 3px solid #FABBF6;
+    padding: 20px;
+    width: 360px;
+    height: 140px;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.4); 
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    box-shadow: 0 4px 15px rgba(239, 182, 239, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.instagram-svg {
+    width: 20px; 
+    height: 20px;
+    fill: white; 
+}
+.discord-svg {
+    width: 20px; 
+    height: 20px;
+    fill: white; 
+}
+.tarjeta1:hover, .tarjeta2:hover, .tarjeta3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(239, 182, 239, 0.4);
+}
+
+.imgGaleria {
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0px 4px 8px rgba(239, 182, 239, 0.4));
+}
+
+.content-text h3 {
+    font-family: "Pacifico";
+    color: #9a599a;
+    font-size: 30px;
+    margin: 0 0 5px 0;
+}
+
+.content-text p {
+    font-family: 'Segoe UI', sans-serif;
+    color: #b37db3;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.estrella {
+    color: #ffd6a1;
+    font-size: 30px;
+    -webkit-text-stroke: 0.1px #f9ca2d;
+}
+/* ================================= */
+/*              FOOTER               */
+/* ================================= */
+
+footer {
+    background-color: rgba(232, 203, 247, 0.85);
+
+    color: white;
+    text-align: center;
+
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ================================= */
+/*        ADAPTACIÓN CELULAR         */
+/* ================================= */
+
+@media (max-width: 700px) {
+
+    /* Encabezado */
+    #encabezado {
+        height: auto;
+        min-height: 70px;
+
+        padding: 10px;
+
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #logo {
+        margin-left: 0;
+    }
+
+    #titleA {
+        font-size: 30px;
+        margin-left: 8px;
+    }
+
+    /* Menú */
+    nav {
+        width: 100%;
+        margin: 15px 0 5px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    /* Presentación */
+    #inicio {
+        padding: 12px;
+    }
+
+    .presentacion {
+        flex-direction: column;
+        gap: 15px;
+
+        padding: 15px;
+        margin: 0;
+    }
+
+    #ImageIni {
+        width: 75%;
+        max-width: 280px;
+    }
+
+    .presentacion-texto {
+        max-width: 100%;
+
+        text-align: center;
+
+        padding: 20px;
+        font-size: 18px;
+    }
+}
+
+
+/* ================================= */
+/*       CELULARES PEQUEÑOS          */
+/* ================================= */
+
+@media (max-width: 380px) {
+
+    #titleA {
+        font-size: 26px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .presentacion-texto {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+/* ================================= */
+/*        SECCIÓN DE GALERÍA         */
+/* ================================= */
+
+.seccion-galeria {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Panel de subida para Muser */
+.panel-subida {
+    background: rgba(255, 255, 255, 0.6);
+    border: 3px dashed #FABBF6;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 35px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.panel-subida h3 {
+    font-family: "Pacifico", cursive;
+    color: #9a599a;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+#formSubida {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+#formSubida input[type="file"] {
+    font-family: 'Segoe UI', sans-serif;
+    color: #9a599a;
+    font-size: 13px;
+}
+
+#formSubida input[type="text"] {
+    padding: 8px 15px;
+    border-radius: 12px;
+    border: 2px solid #FABBF6;
+    background: white;
+    color: #8b528b;
+    outline: none;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.btn-subir {
+    background-color: #ff9ecb;
+    color: white;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 10px rgba(255, 158, 203, 0.4);
+    transition: all 0.2s ease;
+}
+
+.btn-subir:hover {
+    background-color: #ff82bd;
+    transform: translateY(-2px);
+}
+
+/* Cuadrícula flexible para las obras */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    width: 100%;
+    margin-bottom: 30px;
+    justify-items: center;
+}
+
+.galeria-item {
+    background: rgba(255, 255, 255, 0.5);
+    border: 3px solid #FABBF6;
+    border-radius: 20px;
+    padding: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 6px 20px rgba(239, 182, 239, 0.25);
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 280px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px);
+}
+
+.obra-contenido img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.obra-titulo {
+    font-family: "Pacifico", cursive;
+    color: #9a599a;
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-size: 16px;
+}
+
+.btn-eliminar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff758c;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.galeria-item:hover .btn-eliminar {
+    opacity: 1;
+}
+
+/* Estilo para la barra de paginación inferior */
+.paginacion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+}
+
+.paginacion span {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid #FABBF6;
+    color: #9a599a;
+    padding: 6px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.paginacion .page-num.active,
+.paginacion span:hover {
+    background-color: #FABBF6;
+    color: white;
+}
+/* ================================= */
+/*     PANEL DE SUBIDA ESTÉTICO      */
+/* ================================= */
+
+.panel-subida {
+    background: rgba(255, 255, 255, 0.65);
+    border: 3px dashed #FABBF6;
+    border-radius: 25px;
+    padding: 25px;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 25px rgba(239, 182, 239, 0.2);
+}
+
+.panel-subida h3 {
+    font-family: "Pacifico", cursive;
+    color: #9a599a;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#formSubida {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.input-file-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Ocultar input feo por defecto y estilizar botón */
+#inputImagen {
+    display: none;
+}
+
+.btn-archivo {
+    background-color: #f2caed;
+    color: #8b528b;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #FABBF6;
+    transition: all 0.2s ease;
+}
+
+.btn-archivo:hover {
+    background-color: #FABBF6;
+    color: white;
+}
+
+#nombreArchivo {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 13px;
+    color: #a372a3;
+}
+
+#formSubida input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 18px;
+    border-radius: 15px;
+    border: 2px solid #FABBF6;
+    background: white;
+    color: #8b528b;
+    outline: none;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+}
+
+.btn-subir {
+    background-color: #ff9ecb;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 15px;
+    box-shadow: 0 4px 15px rgba(255, 158, 203, 0.4);
+    transition: all 0.2s ease;
+}
+
+.btn-subir:hover {
+    background-color: #ff82bd;
+    transform: translateY(-2px);
+}
+
+/* ================================= */
+/*     VISOR DE IMAGEN (MODAL ZOOM)  */
+/* ================================= */
+
+.galeria-item img {
+    cursor: pointer; /* Cambia a manito para indicar que se puede hacer clic */
+}
+
+.modal-zoom {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(154, 89, 154, 0.7); /* Fondo lila translúcido */
+    backdrop-filter: blur(8px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-contenido {
+    max-width: 85%;
+    max-height: 75vh;
+    border-radius: 20px;
+    border: 4px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    object-fit: contain;
+}
+
+#tituloAmpliado {
+    font-family: "Pacifico", cursive;
+    color: white;
+    font-size: 24px;
+    margin-top: 15px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-cerrar {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-cerrar:hover {
+    transform: scale(1.2);
+}

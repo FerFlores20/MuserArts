@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Pacifico&display=swap" rel="stylesheet">
+
+    <title>MuserArts | Galería</title>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header id="encabezado">
+
+        <img id="logo" src="icon.png" alt="Logo de MuserArts">
+
+        <h1 id="titleA">MuserArts</h1>
+
+        <nav>
+            <ul>
+
+                <li >
+                    <a class="iniciobtn" href="index.html">🏠︎ INICIO</a>
+                </li>
+
+                <li>
+                    <a href="comisiones.html">♛ COMISIONES</a>
+                </li>
+
+                <li>
+                    <a href="galeria.html">🖌 GALERÍA</a>
+                </li>
+
+                <li>
+                    <a href="contacto.html">✉ CONTACTO</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="fondo">
+        <section class="seccion-galeria">
+            <h2 class="titulotarjetas">
+                <span class="estrella">✮⋆˙</span> Mis Obras Destacadas <span class="estrella">✮⋆˙</span>
+            </h2>
+
+            <!-- Panel de subida bonito y estético -->
+            <div class="panel-subida">
+                <h3>Subir Nueva Ilustración</h3>
+                <form id="formSubida">
+                    <div class="input-file-wrapper">
+                        <label for="inputImagen" class="btn-archivo">🗀 Seleccionar Imagen</label>
+                        <input type="file" id="inputImagen" accept="image/*" required>
+                        <span id="nombreArchivo">Ningún archivo seleccionado</span>
+                    </div>
+                    <input type="text" id="inputTitulo" placeholder="Título de la obra..." required>
+                    <button type="submit" class="btn-subir">Publicar en la Galería </button>
+                </form>
+            </div>
+
+            <!-- Cuadrícula de obras -->
+            <div class="galeria-grid" id="galeriaGrid"></div>
+        </section>
+    </main>
+
+    <!-- VENTANA MODAL PARA AGRANDAR IMAGEN -->
+    <div id="modalZoom" class="modal-zoom">
+        <span class="btn-cerrar">&times;</span>
+        <img class="modal-contenido" id="imgAmpliada" alt="Vista ampliada">
+        <p id="tituloAmpliado"></p>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>© 2026 MuserArts - Para mi niña hermosa .</p>
+    </footer>
+
+    <!-- LÓGICA EN ARCHIVO APARTADO -->
+    <script src="galeria.js"></script>
+</body>
+</html>
